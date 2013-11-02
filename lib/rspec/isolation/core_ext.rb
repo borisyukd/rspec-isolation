@@ -68,7 +68,7 @@ RSpec::Core::Example.class_eval do
         @example_group_instance = nil
     
         begin
-          assign_auto_description
+          assign_generated_description
         rescue Exception => e
           set_exception(e)
         end
@@ -105,7 +105,7 @@ RSpec::Core::Example.class_eval do
         set_exception(e)
       ensure
         @example_group_instance.example = nil
-        assign_auto_description
+        assign_generated_description
       end
   
       finish(reporter)
