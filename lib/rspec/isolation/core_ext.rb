@@ -44,7 +44,7 @@ RSpec::Core::Example.class_eval do
     
       begin
         unless pending
-          with_around_hooks do
+          with_around_each_hooks do
             isolated_or_normal do
               begin
                 run_before_each
